@@ -11,9 +11,9 @@ import {
 import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
 
 // Projects Images (add your images to the images directory and import below)
-import Rapp from "./images/r-app.gif";
-import Msf from "./images/1.gif";
-import Capp from "./images/c.gif";
+import Rapp from "./images/r-app.webm";
+import Msf from "./images/1.webm";
+import Capp from "./images/c.webm";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
