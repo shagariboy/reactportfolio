@@ -11,7 +11,9 @@ import {
 import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
 
 // Projects Images (add your images to the images directory and import below)
-import Logo from "./images/logo.svg";
+import Rapp from "./images/r-app.gif";
+import Msf from "./images/1.gif";
+import Capp from "./images/c.gif";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -24,7 +26,7 @@ export { HeroDark as Dark };
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
 */
-export const githubUsername = "Your GitHub username here";
+export const githubUsername = "shagariboy";
 
 // Blog link icon (imported above)
 export const Blog = <FaLink />;
@@ -95,14 +97,22 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["example-1", "example-2", "example-3"];
+export const filteredProjects = ["Launch-countdown-timer", "multi-step-form-main", "calculator-app-fc"];
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
 export const projectCardImages = [
   {
-    name: "example-1",
-    image: Logo,
+    name: "Launch-countdown-timer",
+    image: Rapp,
   },
+  {
+    name: "multi-step-form-main",
+    image: Msf,
+  },
+  {
+    name: "calculator-app-fc",
+    image: Capp,
+  }
 ];
 
 /* Contact Info
@@ -110,4 +120,4 @@ export const projectCardImages = [
   Add your formspree endpoint below.
   https://formspree.io/
 */
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+export const formspreeUrl = "https://formspree.io/f/xbjegvbw";
