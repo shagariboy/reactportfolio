@@ -4,6 +4,8 @@ import { useAppContext } from "../appContext";
 import { formspreeUrl } from "../data";
 // Components
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
+// Page Translation
+import { useTranslation } from 'react-i18next';
 
 export default function ContactForm() {
   const [isValidated, setIsValidated] = React.useState(false);
@@ -12,6 +14,7 @@ export default function ContactForm() {
   const [danger, setDanger] = React.useState(false);
   const [dangerMessage, setDangerMessage] = React.useState(null);
   const { theme } = useAppContext();
+  const { t } = useTranslation();
 
   async function postData(data) {
     const response = await fetch(formspreeUrl, {
@@ -70,28 +73,28 @@ export default function ContactForm() {
     <>
       <Form noValidate validated={isValidated} onSubmit={handleSubmit}>
         <Form.Group className="mx-auto mb-3 form-group" controlId="name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control required type="text" placeholder="Your name" />
+          <Form.Label>{t('contact_name')}</Form.Label>
+          <Form.Control required type="text" placeholder={t('contact_placeholder_name')} />
           <Form.Control.Feedback type="invalid">
-            <h5>Name must be at least one character.</h5>
+            <h5>{t('contact_name_feedback')}</h5>
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mx-auto mb-3 form-group" controlId="email">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>{t('contact_email')}</Form.Label>
           <Form.Control
             required
             pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
             placeholder="someone@something.com"
           />
           <Form.Control.Feedback type="invalid">
-            <h5>Please enter a valid email.</h5>
+            <h5>{t('contact_email_feedback')}</h5>
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mx-auto mb-3 form-group" controlId="message">
-          <Form.Label>Message</Form.Label>
-          <Form.Control required as="textarea" placeholder="Your message..." />
+          <Form.Label>{t('contact_message')}</Form.Label>
+          <Form.Control required as="textarea" placeholder={t('contact_placeholder_message')}/>
           <Form.Control.Feedback type="invalid">
-            <h5>Please provide a valid message.</h5>
+            <h5>{t('contact_message_feedback')}</h5>
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mx-auto text-center form-group">
@@ -103,7 +106,7 @@ export default function ContactForm() {
               disabled={isProcessing}
               className="my-4"
             >
-              Submit{" "}
+              {t('contact_submit')}{" "}
               {isProcessing && (
                 <Spinner animation="border" variant="success" size="sm" />
               )}

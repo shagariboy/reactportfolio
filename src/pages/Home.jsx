@@ -12,6 +12,7 @@ import Contact from "../components/Contact";
 import { BackToTop } from "../components/globalStyledComponents";
 import Footer from "../components/Footer";
 
+
 export default function Home() {
   const { name } = useSelector(selectData);
 

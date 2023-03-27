@@ -24,6 +24,8 @@ import {
 import SecondaryNavBar from "../components/SecondaryNavBar";
 import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
+// Page Translation
+import { useTranslation } from 'react-i18next';
 
 const StyledSection = styled.section`
   min-height: calc(100vh - var(--min-footer-height) - var(--nav-height));
@@ -53,6 +55,7 @@ export default function AllProjects() {
   const error = useSelector(selectError);
   const data = useSelector(selectData);
   const { name } = useSelector(homeData);
+  const { t } = useTranslation();
 
   React.useEffect(
     function () {
@@ -142,7 +145,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <FaGithub /> Projects
+                  {t('all_text')} <FaGithub /> {t('projects_text')}
                 </h2>
                 <div className="underline"></div>
               </Title>

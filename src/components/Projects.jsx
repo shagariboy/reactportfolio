@@ -17,6 +17,9 @@ import { FaGithub } from "react-icons/fa";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
+// Page Translation
+import { useTranslation } from 'react-i18next';
+
 
 const StyledSection = styled.section``;
 
@@ -26,6 +29,7 @@ export default function Projects() {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const data = useSelector(selectData);
+  const { t } = useTranslation();
 
   React.useEffect(
     function () {
@@ -51,7 +55,7 @@ export default function Projects() {
         <Container>
           <Container className="d-flex">
             <Title>
-              <h2>Projects</h2>
+              <h2>{t('projects_title')}</h2>
               <div className="underline"></div>
             </Title>
           </Container>
@@ -63,7 +67,7 @@ export default function Projects() {
           {error && <h2 className="text-center">{error}</h2>}
           {!error && data.length === 0 && (
             <h2 className="text-center">
-              Oops, you do not have any GitHub projects yet...
+              {t('error_text')}
             </h2>
           )}
           {mainProjects.length !== 0 && (
@@ -98,7 +102,7 @@ export default function Projects() {
                         theme === "light" ? "outline-dark" : "outline-light"
                       }
                     >
-                      All <FaGithub /> Projects
+                      {t('all_text')} <FaGithub /> {t('projects_text')}
                     </Button>
                   </Link>
                 </Container>

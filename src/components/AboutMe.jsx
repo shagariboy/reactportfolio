@@ -1,12 +1,19 @@
+
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { selectData } from "../pages/homeSlice";
 import { Element } from "react-scroll";
 // Data
-import { moreInfo } from "../data";
+import { moreInfo} from "../data";
+
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
+// Page Translation
+import { useTranslation } from 'react-i18next';
+
+
+
 
 const StyledAboutMe = styled.section`
   p {
@@ -20,6 +27,9 @@ const StyledAboutMe = styled.section`
 
 export default function AboutMe() {
   const { avatar_url, bio } = useSelector(selectData);
+  const { t } = useTranslation();
+
+
 
   return (
     <Element name={"About"} id="about">
@@ -27,15 +37,15 @@ export default function AboutMe() {
         <Container>
           <Container className="d-flex">
             <Title>
-              <h2>About Me</h2>
+              <h2>{t('about_title')}</h2>
               <div className="underline"></div>
             </Title>
           </Container>
           <Row className="align-items-center mt-5">
             <Col className="d-flex flex-column text-center">
               <Container>
-                <p>{bio}</p>
-                {moreInfo && <p>{moreInfo}</p>}
+                <p>{t('bio')}🏄‍♂️</p>
+                {moreInfo && <p>{t('more_info')}</p>}
               </Container>
             </Col>
             <Col className="d-none d-md-block text-center">
