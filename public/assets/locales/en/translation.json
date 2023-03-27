@@ -1,0 +1,24 @@
+
+{
+    "Language": "Language",
+"bio": "Front-end Developer",
+    "home_title": "Home",
+"about_title": "About Me",
+"skills_title": "Skills",
+"projects_title": "Projects",
+"error_text": "Oops, you do not have any GitHub projects yet...",
+"all_text": "All",
+"projects_text": "Projects",
+"contact_title": "Contact",
+"contact_heading": "Contact Me",
+"contact_name": "Name",
+"contact_placeholder_name": "Your Name",
+"contact_name_feedback": "Name must be at least one character.",
+"contact_email": "Email address",
+"contact_email_feedback": "Please enter a valid email.",
+"contact_message": "Message",
+"contact_placeholder_message": "Your message...",
+"contact_message_feedback": "Please provide a valid message.",
+"contact_submit": "Submit",
+"more_info": "Building beautiful interfaces and pixel-perfect designs. Your go-to person for all things frontend development."
+}

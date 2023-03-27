@@ -5,16 +5,19 @@ import { skillData, resume } from "../data";
 // Components
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
+// Page Translation
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
   const { theme } = useAppContext();
+  const { t } = useTranslation();
 
   return (
     <Element name={"Skills"} id="skills">
       <section className="section">
         <Container className="text-center">
           <Title>
-            <h2>Skills</h2>
+            <h2>{t('skills_title')}</h2>
             <div className="underline"></div>
           </Title>
           <Row className="mt-3 align-items-center">

@@ -27,6 +27,20 @@ body {
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.color};
 }
+.dropdown-menu {
+  background: ${({ theme }) => theme.background};
+  color: #808080;
+}
+.dropdown-item-text {
+  color: #808080;
+}
+
+.dropdown-menu .dropdown-item a {
+  color: #808080;
+}
+ .dropdown-toggle::after {
+  color: #808080;
+ }
 
 a:hover {
   cursor: pointer;
