@@ -119,7 +119,7 @@ export default function ContactForm() {
             onClose={() => setSuccess(false)}
             dismissible
           >
-            <Alert.Heading>Success! I will contact you soon.</Alert.Heading>
+            <Alert.Heading>{t('success')}</Alert.Heading>
           </Alert>
           <Alert
             show={danger}
