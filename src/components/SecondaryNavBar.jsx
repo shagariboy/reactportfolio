@@ -42,7 +42,6 @@ export default function SecondaryNavBar() {
   useEffect(() => {
     console.log('Setting page stuff')
     document.body.dir = currentLanguage.dir || 'ltr'
-    document.title = t('app_title')
   }, [currentLanguage, t])
 
   return (
