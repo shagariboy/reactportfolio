@@ -13,7 +13,7 @@ import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
 // Projects Images (add your images to the images directory and import below)
 import Rapp from "./images/r-app.gif";
 import Msf from "./images/1.gif";
-import Capp from "./images/c.gif";
+import Nac from "./images/na.gif";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -100,7 +100,7 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["Launch-countdown-timer", "multi-step-form-main", "calculator-app-fc"];
+export const filteredProjects = ["Launch-countdown-timer", "multi-step-form-main", "nailsaccessories"];
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
 export const projectCardImages = [
@@ -113,8 +113,8 @@ export const projectCardImages = [
     image: Msf,
   },
   {
-    name: "calculator-app-fc",
-    image: Capp,
+    name: "nailsaccessories",
+    image: Nac,
   }
 ];
 
