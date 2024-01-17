@@ -102,7 +102,7 @@ export default function Projects() {
                         theme === "light" ? "outline-dark" : "outline-light"
                       }
                     >
-                      {t('all_text')} <FaGithub /> {t('projects_text')}
+                      {t('all_text')}&nbsp; <FaGithub /> {t('projects_text')}
                     </Button>
                   </Link>
                 </Container>
